@@ -233,6 +233,11 @@ h3 {
   object-fit: contain;
 }
 
+.tool-row .tool-logo-capcut {
+  width: 142px;
+  height: 68px;
+}
+
 @keyframes tool-scroll {
   from {
     transform: translateX(0);
