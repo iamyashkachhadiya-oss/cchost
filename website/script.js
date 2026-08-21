@@ -1,25 +1,24 @@
 const sections = [...document.querySelectorAll("main section[id]")];
 const links = [...document.querySelectorAll(".nav-links a")];
 
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+function updateActiveNav() {
+  const headerOffset = 120;
+  let activeSection = sections[0];
 
-    if (!visible) return;
+  sections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= headerOffset) {
+      activeSection = section;
+    }
+  });
 
-    links.forEach((link) => {
-      link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`);
-    });
-  },
-  {
-    rootMargin: "-20% 0px -55% 0px",
-    threshold: [0.12, 0.25, 0.5],
-  }
-);
+  links.forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === `#${activeSection.id}`);
+  });
+}
 
-sections.forEach((section) => navObserver.observe(section));
+updateActiveNav();
+window.addEventListener("scroll", updateActiveNav, { passive: true });
+window.addEventListener("resize", updateActiveNav);
 
 function setupSlider(trackSelector, slideSelector, prevSelector, nextSelector) {
   const track = document.querySelector(trackSelector);
