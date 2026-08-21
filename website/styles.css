@@ -719,6 +719,14 @@ h3 {
   margin-bottom: 0;
 }
 
+.closing-thanks {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--ink) !important;
+  font-weight: 760 !important;
+}
+
 .modal-backdrop[hidden] {
   display: none;
 }
@@ -866,19 +874,19 @@ h3 {
   }
 
   .tool-marquee {
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 26px;
-    padding: 13px 0 13px 13px;
-    border-radius: 14px;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 9px;
+    margin-top: 22px;
+    padding: 8px 0 8px 8px;
+    border-radius: 999px;
     text-align: left;
   }
 
   .tool-label {
     width: fit-content;
-    min-height: 34px;
-    padding: 0 13px;
-    font-size: 12px;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
   }
 
   .tool-track {
@@ -887,19 +895,19 @@ h3 {
   }
 
   .tool-row {
-    gap: 24px;
-    padding-right: 24px;
-    animation-duration: 22s;
+    gap: 18px;
+    padding-right: 18px;
+    animation-duration: 20s;
   }
 
   .tool-row span {
-    width: 96px;
-    height: 48px;
+    width: 76px;
+    height: 34px;
   }
 
   .tool-row .tool-logo-capcut {
-    width: 118px;
-    height: 54px;
+    width: 94px;
+    height: 40px;
   }
 
   .thinking-copy {
