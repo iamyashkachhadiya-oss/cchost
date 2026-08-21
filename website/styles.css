@@ -213,23 +213,18 @@ h3 {
 .tool-row {
   display: flex;
   flex: 0 0 auto;
-  gap: 12px;
+  gap: 34px;
   min-width: max-content;
-  padding-right: 12px;
-  animation: tool-scroll 24s linear infinite;
+  padding-right: 34px;
+  animation: tool-scroll 26s linear infinite;
 }
 
 .tool-row span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 72px;
-  height: 42px;
-  padding: 8px 12px;
-  border: 1px solid rgba(224, 216, 201, 0.95);
-  border-radius: 999px;
-  background: var(--paper-strong);
-  box-shadow: 0 8px 18px rgba(20, 21, 21, 0.06);
+  width: 118px;
+  height: 58px;
 }
 
 .tool-row img {
