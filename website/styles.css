@@ -1,17 +1,18 @@
 :root {
   --ink: #141515;
-  --muted: #626966;
-  --paper: #f7f5ee;
-  --paper-strong: #fffaf0;
+  --muted: #59615d;
+  --paper: #f8f5ec;
+  --paper-strong: #fbf7ee;
   --white: #ffffff;
   --green: #00693e;
   --deep: #111f1b;
-  --yellow: #ffd84f;
+  --yellow: #e8c34c;
   --blue: #315a7e;
   --rose: #c95c4a;
-  --line: #ded8ca;
-  --shadow: 0 22px 54px rgba(20, 21, 21, 0.12);
+  --line: #e0d8c9;
+  --shadow: 0 18px 46px rgba(20, 21, 21, 0.1);
   --radius: 8px;
+  --font-main: "Avenir Next", Inter, Aptos, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 * {
@@ -26,7 +27,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, Aptos, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-main);
   line-height: 1.45;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -93,7 +94,7 @@ a {
   display: flex;
   align-items: center;
   background:
-    linear-gradient(120deg, rgba(0, 105, 62, 0.12), transparent 36%),
+    linear-gradient(120deg, rgba(0, 105, 62, 0.08), transparent 36%),
     var(--paper);
   border-bottom: 1px solid var(--line);
 }
@@ -123,14 +124,14 @@ p {
 h1 {
   margin-bottom: 24px;
   font-size: clamp(62px, 10vw, 118px);
-  line-height: 0.9;
+  line-height: 0.92;
   letter-spacing: 0;
 }
 
 h2 {
   margin-bottom: 0;
   max-width: 1050px;
-  font-size: clamp(34px, 5vw, 60px);
+  font-size: clamp(34px, 4.8vw, 58px);
   line-height: 1.04;
   letter-spacing: 0;
 }
@@ -150,7 +151,7 @@ h3 {
   color: #303431;
   font-size: clamp(20px, 2.4vw, 28px);
   line-height: 1.35;
-  font-weight: 750;
+  font-weight: 720;
 }
 
 .section-title > p:not(.eyebrow) {
@@ -158,7 +159,7 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 650;
+  font-weight: 560;
 }
 
 .tool-line {
@@ -167,10 +168,10 @@ h3 {
   padding: 18px 20px;
   border-left: 6px solid var(--yellow);
   background: var(--white);
-  box-shadow: 0 12px 32px rgba(20, 21, 21, 0.08);
+  box-shadow: 0 12px 28px rgba(20, 21, 21, 0.07);
   color: var(--muted);
   font-size: clamp(16px, 1.7vw, 20px);
-  font-weight: 700;
+  font-weight: 680;
 }
 
 .image-panel,
@@ -195,7 +196,7 @@ h3 {
 }
 
 .ideas-section {
-  background: var(--paper-strong);
+  background: var(--paper);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -212,7 +213,7 @@ h3 {
   border: 1px solid rgba(222, 216, 202, 0.92);
   border-radius: var(--radius);
   background: var(--white);
-  box-shadow: 0 18px 42px rgba(20, 21, 21, 0.08);
+  box-shadow: 0 16px 36px rgba(20, 21, 21, 0.07);
 }
 
 .idea-card span {
@@ -220,7 +221,7 @@ h3 {
   margin-bottom: 18px;
   color: var(--green);
   font-size: 14px;
-  font-weight: 950;
+  font-weight: 900;
 }
 
 .idea-card p {
@@ -232,7 +233,7 @@ h3 {
 .main-idea {
   grid-column: span 2;
   background:
-    linear-gradient(135deg, rgba(0, 105, 62, 0.1), transparent 52%),
+    linear-gradient(135deg, rgba(0, 105, 62, 0.075), transparent 52%),
     var(--white);
 }
 
@@ -255,21 +256,22 @@ h3 {
   border-left: 6px solid var(--yellow);
   border-radius: var(--radius);
   background: var(--white);
-  box-shadow: 0 18px 42px rgba(20, 21, 21, 0.08);
+  box-shadow: 0 16px 36px rgba(20, 21, 21, 0.07);
 }
 
 .thinking-copy p {
   margin: 0;
   color: #343a36;
-  font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 650;
+  font-size: clamp(17px, 1.65vw, 20px);
+  font-weight: 560;
+  line-height: 1.58;
 }
 
 .thinking-copy .thinking-lead {
   color: var(--green);
-  font-size: clamp(22px, 2.5vw, 30px);
+  font-size: clamp(21px, 2.25vw, 28px);
   font-weight: 900;
-  line-height: 1.2;
+  line-height: 1.24;
 }
 
 .process-stack {
@@ -281,7 +283,7 @@ h3 {
   padding: 22px;
   border: 1px solid rgba(222, 216, 202, 0.92);
   border-radius: var(--radius);
-  background: var(--paper-strong);
+  background: rgba(255, 255, 255, 0.76);
 }
 
 .process-stack span {
@@ -307,9 +309,9 @@ h3 {
   max-width: 980px;
   margin: clamp(28px, 5vw, 52px) auto 0;
   color: var(--ink);
-  font-size: clamp(24px, 3.5vw, 42px);
-  font-weight: 900;
-  line-height: 1.12;
+  font-size: clamp(23px, 3.1vw, 38px);
+  font-weight: 860;
+  line-height: 1.16;
   text-align: center;
 }
 
@@ -353,7 +355,7 @@ h3 {
 }
 
 .visual-section {
-  background: #f2eadb;
+  background: var(--paper);
 }
 
 .art-grid {
@@ -588,9 +590,7 @@ h3 {
 }
 
 .closing-section {
-  background:
-    linear-gradient(120deg, rgba(0, 105, 62, 0.1), transparent 38%),
-    var(--paper-strong);
+  background: var(--paper);
 }
 
 .closing-card {
@@ -600,7 +600,7 @@ h3 {
   border: 1px solid rgba(222, 216, 202, 0.95);
   border-radius: var(--radius);
   background: var(--white);
-  box-shadow: var(--shadow);
+  box-shadow: 0 16px 42px rgba(20, 21, 21, 0.09);
 }
 
 .closing-card h2 {
@@ -609,8 +609,9 @@ h3 {
 
 .closing-card p:not(.eyebrow) {
   color: #343a36;
-  font-size: clamp(18px, 1.8vw, 22px);
-  font-weight: 650;
+  font-size: clamp(17px, 1.65vw, 20px);
+  font-weight: 560;
+  line-height: 1.58;
 }
 
 .closing-card p:last-child {
@@ -709,8 +710,9 @@ h3 {
 
   .nav-links a {
     min-width: 0;
-    padding: 8px 4px;
+    padding: 8px 3px;
     font-size: 11px;
+    line-height: 1.05;
     text-align: center;
     white-space: normal;
   }
@@ -731,17 +733,17 @@ h3 {
 
   .poster-track,
   .reel-track {
-    grid-auto-columns: min(84vw, 420px);
+    grid-auto-columns: min(86vw, 420px);
     padding-bottom: 4px;
   }
 
   h1 {
-    font-size: clamp(46px, 15vw, 68px);
+    font-size: clamp(44px, 14.5vw, 66px);
   }
 
   h2 {
-    font-size: clamp(30px, 9vw, 44px);
-    line-height: 1.06;
+    font-size: clamp(29px, 8.8vw, 42px);
+    line-height: 1.08;
   }
 
   h3 {
@@ -759,7 +761,17 @@ h3 {
   }
 
   .thinking-copy {
-    padding: 20px;
+    padding: 18px;
+  }
+
+  .thinking-copy p,
+  .closing-card p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.56;
+  }
+
+  .thinking-copy .thinking-lead {
+    font-size: 20px;
   }
 
   .thinking-closing {
@@ -767,13 +779,18 @@ h3 {
   }
 
   .closing-card {
-    padding: 22px;
+    padding: 20px;
   }
 
   .section,
   .hero {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .section {
+    padding-top: 52px;
+    padding-bottom: 52px;
   }
 
   .main-idea {
