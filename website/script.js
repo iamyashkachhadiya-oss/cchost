@@ -45,6 +45,25 @@ function setupSlider(trackSelector, slideSelector, prevSelector, nextSelector) {
 setupSlider("[data-poster-track]", ".poster-slide", "[data-slider-prev]", "[data-slider-next]");
 setupSlider("[data-reel-track]", ".reel-card", "[data-reel-prev]", "[data-reel-next]");
 
+const reelVideos = [...document.querySelectorAll(".reel-shell video")];
+
+reelVideos.forEach((video) => {
+  video.muted = true;
+  video.play().catch(() => {
+    video.controls = true;
+  });
+
+  video.addEventListener("click", () => {
+    reelVideos.forEach((otherVideo) => {
+      if (otherVideo !== video) otherVideo.muted = true;
+    });
+
+    video.muted = !video.muted;
+    video.controls = !video.muted;
+    video.play().catch(() => {});
+  });
+});
+
 const modalData = {
   "modal-fashion": {
     kicker: "Experience detail",

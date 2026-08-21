@@ -629,6 +629,7 @@ h3 {
   object-fit: contain;
   border-radius: 8px;
   background: #0a0d0c;
+  cursor: pointer;
 }
 
 .reel-shell p,
