@@ -285,9 +285,120 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
-.idea-grid {
+.thesis-panel,
+.audience-map,
+.pillar-grid,
+.execution-plan,
+.measurement-panel,
+.section-subhead {
   max-width: 1160px;
   margin: 0 auto;
+}
+
+.thesis-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 18px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid rgba(222, 216, 202, 0.95);
+  border-left: 6px solid var(--green);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(0, 105, 62, 0.08), transparent 48%),
+    var(--white);
+  box-shadow: 0 16px 36px rgba(20, 21, 21, 0.07);
+}
+
+.thesis-panel span,
+.audience-map span,
+.execution-plan span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.thesis-panel p,
+.section-subhead p,
+.measurement-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 17px;
+  font-weight: 560;
+  line-height: 1.52;
+}
+
+.thesis-shift {
+  display: grid;
+  align-content: center;
+  gap: 12px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(248, 245, 236, 0.86);
+}
+
+.thesis-shift p {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(224, 216, 201, 0.9);
+}
+
+.thesis-shift p:last-child {
+  border-bottom: 0;
+}
+
+.audience-map {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.audience-map article {
+  min-height: 190px;
+  padding: 20px;
+  border: 1px solid rgba(222, 216, 202, 0.92);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(20, 21, 21, 0.06);
+}
+
+.audience-map article:nth-child(2) {
+  transform: translateY(18px);
+}
+
+.audience-map article:nth-child(3) {
+  transform: translateY(36px);
+}
+
+.audience-map p,
+.execution-plan p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 560;
+  line-height: 1.52;
+}
+
+.section-subhead {
+  margin-top: 46px;
+  margin-bottom: 20px;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.section-subhead h3 {
+  max-width: 780px;
+}
+
+.section-subhead p {
+  max-width: 920px;
+}
+
+.pillar-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
@@ -323,6 +434,50 @@ h3 {
   background:
     linear-gradient(135deg, rgba(0, 105, 62, 0.075), transparent 52%),
     var(--white);
+}
+
+.execution-plan {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.execution-plan article {
+  padding: 18px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(222, 216, 202, 0.85);
+}
+
+.measurement-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+  gap: 18px;
+  margin-top: 14px;
+  padding: clamp(22px, 3vw, 32px);
+  border-radius: var(--radius);
+  background: var(--deep);
+  color: var(--white);
+  box-shadow: 0 18px 46px rgba(20, 21, 21, 0.13);
+}
+
+.measurement-panel h3,
+.measurement-panel p {
+  color: var(--white);
+}
+
+.measurement-panel > p {
+  grid-column: 1 / -1;
+  max-width: 920px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.measurement-panel div {
+  display: grid;
+  gap: 10px;
 }
 
 .thinking-section {
@@ -794,15 +949,25 @@ h3 {
 }
 
 @media (max-width: 1050px) {
-  .idea-grid,
+  .audience-map,
+  .pillar-grid,
   .thinking-layout,
   .experience-window,
   .art-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .thesis-panel,
+  .measurement-panel {
+    grid-template-columns: 1fr;
+  }
+
   .main-idea {
     grid-column: span 2;
+  }
+
+  .execution-plan {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .poster-track,
@@ -821,7 +986,7 @@ h3 {
   .nav-links {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 3px;
     padding: 4px;
     border-radius: 16px;
@@ -830,18 +995,39 @@ h3 {
   .nav-links a {
     min-width: 0;
     padding: 8px 3px;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1.05;
     text-align: center;
     white-space: normal;
   }
 
   .hero,
-  .idea-grid,
+  .audience-map,
+  .pillar-grid,
+  .execution-plan,
+  .measurement-panel,
   .thinking-layout,
   .experience-window,
   .art-grid {
     grid-template-columns: 1fr;
+  }
+
+  .thesis-panel {
+    grid-template-columns: 1fr;
+    padding: 18px;
+  }
+
+  .audience-map {
+    margin-bottom: 22px;
+  }
+
+  .audience-map article:nth-child(2),
+  .audience-map article:nth-child(3) {
+    transform: none;
+  }
+
+  .section-subhead {
+    margin-top: 24px;
   }
 
   .hero {
@@ -965,7 +1151,9 @@ h3 {
     margin-bottom: 24px;
   }
 
-  .idea-grid,
+  .audience-map,
+  .pillar-grid,
+  .execution-plan,
   .experience-window,
   .process-stack,
   .art-grid {
@@ -977,6 +1165,10 @@ h3 {
   .reel-card,
   .closing-card,
   .thinking-copy,
+  .thesis-panel,
+  .audience-map article,
+  .execution-plan article,
+  .measurement-panel,
   .idea-card,
   .experience-card {
     border-radius: 7px;
