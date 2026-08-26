@@ -471,9 +471,14 @@ h3 {
 .art-card img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+}
+
+.art-card:nth-child(7) img {
+  aspect-ratio: 2 / 3;
 }
 
 .poster-slider {
@@ -545,6 +550,7 @@ h3 {
 .poster-slide img {
   width: 100%;
   height: auto;
+  aspect-ratio: 2 / 3;
   object-fit: contain;
 }
 
