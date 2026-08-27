@@ -69,12 +69,12 @@ const modalData = {
     kicker: "Experience detail",
     title: "Fashion pages",
     body: `
-      <p>This is where I learned content by actually publishing. The work was less about making one perfect post and more about understanding repeated audience behavior.</p>
+      <p>This is where I learned content by actually publishing and watching how people responded over time.</p>
       <ul>
         <li>Created and tested fashion/lifestyle posts at volume.</li>
         <li>Worked with captions, hooks, comments, DMs, timing, and post formats.</li>
-        <li>Learned what makes people stop scrolling, save, reply, and come back.</li>
-        <li>Built the basic content instinct I now use before designing any campaign.</li>
+        <li>Learned to notice what makes people stop scrolling, save, reply, and come back.</li>
+        <li>Built the basic content instinct I now use before planning a campaign.</li>
       </ul>
     `,
   },
@@ -86,8 +86,8 @@ const modalData = {
       <ul>
         <li>Worked on ecommerce positioning for men's fashion products.</li>
         <li>Learned how content supports sales, product confidence, and repeat customers.</li>
-        <li>Built thinking around what a customer needs to see before making a purchase.</li>
-        <li>Scaled with a business mindset: attention should lead somewhere useful.</li>
+        <li>Thought about what a customer needs to see before making a purchase.</li>
+        <li>Learned that attention becomes more useful when it connects to trust and action.</li>
       </ul>
     `,
   },
@@ -100,7 +100,7 @@ const modalData = {
         <li>Worked on product-focused marketing for fashion ecommerce.</li>
         <li>Created and used short-form videos, product visuals, and launch-style content.</li>
         <li>Thought about how to show fit, style, offer, and product value quickly.</li>
-        <li>Built the habit of matching format to goal: reel for attention, poster for clarity, campaign for conversion.</li>
+        <li>Practiced matching format to goal: reel for attention, poster for clarity, campaign for conversion.</li>
       </ul>
     `,
   },
@@ -113,7 +113,7 @@ const modalData = {
         <li>Created visual posts and poster-style content for textile communication.</li>
         <li>Worked with festive, announcement, exhibition, and product-led designs.</li>
         <li>Learned how visuals need to look professional while still being quickly readable.</li>
-        <li>Built stronger judgment around layout, spacing, hierarchy, and brand tone.</li>
+        <li>Improved my judgment around layout, spacing, hierarchy, and brand tone.</li>
       </ul>
     `,
   },
