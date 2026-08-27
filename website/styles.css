@@ -636,6 +636,70 @@ h3 {
   aspect-ratio: 2 / 3;
 }
 
+.proof-summary,
+.proof-grid {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.proof-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.proof-summary article {
+  padding: 18px;
+  border: 1px solid rgba(222, 216, 202, 0.9);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 12px 30px rgba(20, 21, 21, 0.06);
+}
+
+.proof-summary span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 950;
+}
+
+.proof-summary p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 560;
+  line-height: 1.52;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.proof-card {
+  display: block;
+  min-height: 100%;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(222, 216, 202, 0.9);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: 0 16px 36px rgba(20, 21, 21, 0.08);
+}
+
+.proof-card img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: var(--paper-strong);
+}
+
 .poster-slider {
   max-width: 1120px;
   margin-left: auto;
@@ -953,7 +1017,9 @@ h3 {
   .pillar-grid,
   .thinking-layout,
   .experience-window,
-  .art-grid {
+  .art-grid,
+  .proof-summary,
+  .proof-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1008,7 +1074,9 @@ h3 {
   .measurement-panel,
   .thinking-layout,
   .experience-window,
-  .art-grid {
+  .art-grid,
+  .proof-summary,
+  .proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1156,7 +1224,9 @@ h3 {
   .execution-plan,
   .experience-window,
   .process-stack,
-  .art-grid {
+  .art-grid,
+  .proof-summary,
+  .proof-grid {
     gap: 12px;
   }
 
@@ -1169,9 +1239,19 @@ h3 {
   .audience-map article,
   .execution-plan article,
   .measurement-panel,
+  .proof-summary article,
+  .proof-card,
   .idea-card,
   .experience-card {
     border-radius: 7px;
+  }
+
+  .proof-card {
+    padding: 8px;
+  }
+
+  .proof-card img {
+    max-height: none;
   }
 
   .modal-card {
